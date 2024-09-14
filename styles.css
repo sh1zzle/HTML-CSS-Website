@@ -84,6 +84,7 @@ header {
   justify-content: center;
   align-items: center;
   flex-grow: 1;
+  gap: 20px;
 }
 
 .search {
@@ -94,8 +95,6 @@ header {
 li {
   list-style-type: none;
   align-items: center;
-  padding-left: 10px;
-  padding-right: 10px;
   color: #7eb9c9;
   font-size: 16px;
 }
@@ -400,9 +399,147 @@ button:hover {
   gap: 20px;
 }
 
+.menu {
+  display: none;
+}
+
+.footer {
+  background: linear-gradient(to bottom, #1e5579, #017b92);
+  color: white;
+  padding: 10px;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding-top: 65px;
+  margin-top: 10px;
+  max-width: 1375px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  gap: 35px;
+}
+
+.copyright {
+  margin-top: 30px;
+  padding-bottom: 50px;
+  font-size: 14px;
+  line-height: 1rem;
+}
+
+.address {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 20px;
+  max-width: 25%;
+  min-width: 300px;
+}
+
+.building-icon {
+  width: 100%; /* Allows the image to scale responsively */
+  height: auto; /* Maintains the aspect ratio */
+  min-width: 287px; /* Prevents the image from shrinking below 200px */
+  max-width: 100%; /* Ensures the image doesn’t exceed the parent container */
+  object-fit: cover; /* Ensures the image scales correctly within the box */
+}
+
+.footer-label {
+  font-size: 20px;
+  line-height: 1.75rem;
+  font-weight: 600;
+}
+
+.menu-footer {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  flex-grow: 1;
+  align-items: flex-start;
+}
+
+.navs-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.navs-label {
+  color: white;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.navs-label:hover {
+  color: #f79c16;
+  cursor: pointer;
+}
+
+.footer-icons {
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+  text-align: left;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.contact-details {
+  color: #f79c16;
+  cursor: pointer;
+}
+
+.contact-details:hover {
+  color: #70af31;
+}
+
+.mobile-icon {
+  padding-left: 4px;
+}
+
+.resources {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 52%;
+}
+
+.resources-label {
+  color: #f79c16;
+  cursor: pointer;
+  font-size: 23px;
+  line-height: 1.75rem;
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+.resources-label:hover {
+  color: #70af31;
+  transition-duration: 0.5s;
+}
+
+.resources-date {
+  color: black;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  margin-top: 10px;
+}
+
 /* START OF MEDIA SCREENS */
 
 @media screen and (max-width: 768px) {
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .resources {
+    width: 100%;
+  }
   .second-header {
     font-size: 35px;
     line-height: 40px;
@@ -494,6 +631,23 @@ button:hover {
     padding-right: 3rem;
     padding-left: 3rem;
   }
+
+  .menu {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  .menu-icon {
+    display: flex;
+    width: 15px;
+    justify-content: center;
+    height: 15px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -505,7 +659,6 @@ button:hover {
 @media screen and (max-width: 992px) {
   .navs {
     justify-content: flex-end;
-    gap: 0px;
   }
 
   .domain-market-logo {
@@ -587,5 +740,9 @@ button:hover {
 @media screen and (max-width: 639px) {
   .icons {
     grid-template-columns: repeat(2, 1fr); /* 3 equal-width columns */
+  }
+
+  .domain-market-logo {
+    width: 220px;
   }
 }
